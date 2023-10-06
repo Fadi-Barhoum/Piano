@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0e0e0e;
+    min-height: 100vh;
+}
+
+.wrapper {
+    background: #141414;
+    box-shadow: 0px 0px 61px #fff;
+    width: 780px;
+    border-radius: 20px;
+    padding: 35px 40px;
+}
+
+.wrapper header {
+    color: #b2b2b2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h2 {
+    font-size: 1.6rem;
+}
+
+header .column {
+    display: flex;
+    align-items: center;
+}
+
+header .column span {
+    margin-right: 15px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.volume-slider input {
+    accent-color: #fff;
+    outline: 0;
+}
+
+.keys-checkbox input{
+    appearance: none;
+    height: 30px;
+    width: 60px;
+    background: #4b4b4b;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.keys-checkbox input::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background: #8c8c8c;
+    border-radius: inherit;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.keys-checkbox input:checked:before {
+    left: 35px;
+    background: #fff;
+}
+
+.wrapper .pinao-keys {
+    display: flex;
+    margin-top: 40px;
+}
+
+.pinao-keys .key {
+    list-style: none;
+    color: #a2a2a2;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.pinao-keys .black {
+    width: 44px;
+    height: 170px;
+    background: linear-gradient(#333, #000);
+    border-radius: 0 0 5px 5px;
+    margin: 0 -22px 0 -22px;
+    z-index: 2;
+}
+
+.pinao-keys .white {
+    width: 70px;
+    height: 230px;
+    background: linear-gradient(#fff 96%, #eee 4%);
+    border-radius: 8px;
+    border: 1px solid #000;
+}
+
+.pinao-keys .white.active {
+    box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+    background: linear-gradient(to bottom,#fff 0%, #eee 100%);
+}
+
+.pinao-keys span {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    text-align: center;
+    font-size: 1.13rem;
+}
+
+.pinao-keys .black.active {
+    box-shadow: inset -5px 5px 20px rgba(255,255,255,0.1);
+    background: linear-gradient(to bottom,#000, #434343);
+}
+
+
+.pinao-keys .key.hide span {
+    display: none;
+}
